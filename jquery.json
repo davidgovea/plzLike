@@ -1,0 +1,37 @@
+{
+	"name": "plzlike",
+	"title": "Please Like Us!",
+	"description": "A configurable Facebook like-gate plugin for promotions.",
+	"keywords": [
+		"jquery",
+		"facebook",
+		"like",
+		"firebase"
+	],
+	"version": "0.0.1",
+	"author": {
+		"name": "David Govea",
+		"email": "govea.d@gmail.com",
+		"url": "https://github.com/davidgovea"
+	},
+	"maintainers": [
+		{
+		"name": "David Govea",
+		"email": "govea.d@gmail.com",
+		"url": "https://github.com/davidgovea"
+		}
+	],
+	"licenses": [
+		{
+			"type": "MIT",
+			"url": "http://davidgovea.mit-license.org/"
+		}
+	],
+	"bugs": "https://github.com/davidgovea/plzlike/issues",
+	"homepage": "https://github.com/davidgovea/plzlike",
+	"docs": "https://github.com/davidgovea/plzlike#readme",
+	"download": "https://github.com/davidgovea/plzlike/archive/master.zip",
+	"dependencies": {
+		"jquery": ">=1.4"
+	}
+}
