@@ -1,0 +1,23 @@
+{
+  "name": "plzlike",
+  "version": "0.0.1",
+  "homepage": "https://github.com/davidgovea/plzLike",
+  "authors": [
+    "David Govea <govea.d@gmail.com>"
+  ],
+  "description": "A jQuery plugin for Facebook like-gates, backed by Firebase or custom endpoint.",
+  "main": "['dist/jquery.plzlike.js', 'dist/jquery.plzlike.css']",
+  "keywords": [
+    "jquery",
+    "facebook",
+    "like",
+    "firebase"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "src",
+    "test"
+  ]
+}
