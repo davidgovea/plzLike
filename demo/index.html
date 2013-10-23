@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>jQuery Boilerplate</title>
+		<title>Please Like Us</title>
+		<link rel="stylesheet" href="../dist/jquery.plzlike.css" />
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-		<script src="../src/jquery.boilerplate.js"></script>
+		<script type='text/javascript' src='https://cdn.firebase.com/v0/firebase.js'></script>
+		<script src="../dist/jquery.plzlike.js"></script>
 	</head>
 	<body>
 		<div id="element"></div>
 		<script>
 			$(function() {
-				$("#element").defaultPluginName({
-					propertyName: "a custom value"
+				$("#element").plzLike({
+					appId: "500906316671503",
+					page: "CuttleCommunity",
+					firebaseUrl: "https://plzlike.firebaseIO.com"
+					// height: 200,
+					// width: 200
 				});
 			});
 		</script>
