@@ -1,7 +1,7 @@
 {
 	"name": "plzlike",
 	"title": "Please Like Us!",
-	"description": "A configurable Facebook like-gate plugin for promotions.",
+	"description": "A jQuery plugin for Facebook like-gates, backed by Firebase or custom endpoint.",
 	"keywords": [
 		"jquery",
 		"facebook",
