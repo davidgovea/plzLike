@@ -180,13 +180,11 @@ do ($ = jQuery, window, document) ->
 			"""
 			# Begin - start button to bring up login/permissions
 			begin: -> 
-				alert @settings.height ? $(@element).height()
 				return """
 					<button>Get started</button>
 				"""
 			# Like us! Show FB likebox
 			like: -> 
-				alert @settings.height ? $(@element).height()
 				return """
 					<div class="fb-like-box"
 						data-href="http://www.facebook.com/#{@settings.pageId}"
