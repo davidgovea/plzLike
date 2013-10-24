@@ -1,76 +1,125 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset='utf-8'>
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+    <title>plzLike by davidgovea</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/main.js"></script>
     <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <title>Plzlike by davidgovea</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
   </head>
-
   <body>
-    <div id="container">
-      <div class="inner">
 
-        <header>
-          <h1>Plzlike</h1>
-          <h2>A configurable Facebook like-gate jQuery plugin for promotions.</h2>
-        </header>
+      <header>
+        <h1>plzLike</h1>
+        <p>A jQuery plugin for Facebook like-gates, backed by Firebase or custom endpoint.</p>
+      </header>
 
-        <section id="downloads" class="clearfix">
-          <a href="https://github.com/davidgovea/plzLike/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
-          <a href="https://github.com/davidgovea/plzLike/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
-          <a href="https://github.com/davidgovea/plzLike" id="view-on-github" class="button"><span>View on GitHub</span></a>
-        </section>
+      <div id="banner">
+        <span id="logo"></span>
 
-        <hr>
+        <a href="https://github.com/davidgovea/plzLike" class="button fork"><strong>View On GitHub</strong></a>
+        <div class="downloads">
+          <span>Downloads:</span>
+          <ul>
+            <li><a href="https://github.com/davidgovea/plzLike/zipball/master" class="button">ZIP</a></li>
+            <li><a href="https://github.com/davidgovea/plzLike/tarball/master" class="button">TAR</a></li>
+          </ul>
+        </div>
+      </div><!-- end banner -->
 
-        <section id="main_content">
-          <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+    <div class="wrapper">
+      <nav>
+        <ul></ul>
+      </nav>
+      <section>
+        <p><strong>plzLike</strong> was created to make it easier to run like-based Facebook promotions (giveaways, contests, etc).  </p>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<p>A <a href="https://www.facebook.com/facebookforbusiness/news/page-promotions-terms">recent TOS change by Facebook</a> marked an easing up on rules - the main point is now simply to display a "..not endorsed by.." statement.  </p>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+<p><a href="https://www.firebase.com/">Firebase</a> is a "real time back-end" allowing data storage and access from <strong>client-side</strong> code... with a <strong>great free tier</strong>. Using Firebase allows the plugin to be used from any page, collecting entrants without a back-end care in the world (not to mention the crazy real-time Firebase features that this project doesn't make use of)  </p>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+<h2>
+<a name="features" class="anchor" href="#features"><span class="octicon octicon-link"></span></a>Features</h2>
 
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+<ul>
+<li>Step users through <strong>"liking" your page</strong> and <strong>"entering" your promotion</strong>
+</li>
+<li>Store entrants list in <a href="https://www.firebase.com/">cloud storage</a>
+</li>
+<li>Configurable markup for the entry steps</li>
+</ul><h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+<ol>
+<li>
+<p><strong>Requirements</strong>  </p>
 
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+<ol>
+<li>Facebook App ID</li>
+<li>Facebook page to target (e.g. <a href="https://www.facebook.com/">https://www.facebook.com/</a> <strong>Page Name</strong> )</li>
+<li>
+<a href="http://firebase.com">Firebase</a> URL (sign up first)</li>
+</ol>
+</li>
+<li>
+<p><strong>Include jQuery:</strong></p>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<div class="highlight highlight-html"><pre><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</pre></div>
+</li>
+<li>
+<p><strong>Data store:</strong><br>
+Sign up for <a href="http://firebase.com">Firebase</a> and include firebase script:</p>
 
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+<div class="highlight highlight-html"><pre><span class="c">&lt;!-- End of body, or somewhere in head if you must --&gt;</span>
+<span class="nt">&lt;script </span><span class="na">type=</span><span class="s">'text/javascript'</span> <span class="na">src=</span><span class="s">'https://cdn.firebase.com/v0/firebase.js'</span><span class="nt">&gt;&lt;/script&gt;</span>
+</pre></div>
+</li>
+<li>
+<p><strong>Include plzLike:</strong></p>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+<div class="highlight highlight-html"><pre><span class="c">&lt;!-- Up in da head --&gt;</span>
+<span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"dist/jquery.plzlike.min.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">/&gt;</span>
 
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+<span class="c">&lt;!-- After jQuery --&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"dist/jquery.plzlike.min.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</pre></div>
+</li>
+<li>
+<p><strong>Call the plugin:</strong></p>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-        </section>
-
-        <footer>
-          Plzlike is maintained by <a href="https://github.com/davidgovea">davidgovea</a><br>
-          This page was generated by <a href="http://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
-        </footer>
-
-        
-      </div>
+<div class="highlight highlight-javascript"><pre><span class="nx">$</span><span class="p">(</span><span class="s2">"#element"</span><span class="p">).</span><span class="nx">plzLike</span><span class="p">({</span>
+    <span class="nx">appId</span><span class="o">:</span> <span class="o">&lt;</span><span class="nx">Facebook</span> <span class="nx">App</span> <span class="nx">ID</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="nx">page</span><span class="o">:</span> <span class="o">&lt;</span><span class="nx">Facebook</span> <span class="nx">Page</span> <span class="nx">name</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="nx">firebaseUrl</span><span class="o">:</span> <span class="o">&lt;</span><span class="nx">Firebase</span> <span class="nx">URL</span><span class="o">&gt;</span>
+<span class="p">});</span>
+</pre></div>
+</li>
+</ol>
+      </section>
+      <footer>
+        <p>Project maintained by <a href="https://github.com/davidgovea">davidgovea</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
+      </footer>
     </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-45109969-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
   </body>
 </html>
