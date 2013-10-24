@@ -80,7 +80,6 @@ do ($ = jQuery, window, document) ->
 							@changeView('like')
 							# Listen for a like
 							FB.Event.subscribe 'edge.create', (href, widget) =>
-								debugger
 								# Is it us?
 								if href.match new RegExp(@settings.page, 'i')
 									@changeView('liked')
@@ -107,7 +106,6 @@ do ($ = jQuery, window, document) ->
 		submit: ->
 			complete = (err) ->
 				@changeView('done')
-				debugger
 
 			# Get available data about this FB user
 			FB.api '/me', (userData) =>
