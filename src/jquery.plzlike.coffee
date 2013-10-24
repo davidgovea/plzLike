@@ -128,7 +128,7 @@ do ($ = jQuery, window, document) ->
 				# Unbind.. we don't care about realtime
 				userRecord.off 'value'
 
-				if snapshot?.val() and firstReceipt
+				if snapshot?.val()?
 					# They've already entered!
 					@changeView('dupe')
 				else

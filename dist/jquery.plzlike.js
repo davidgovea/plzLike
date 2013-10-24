@@ -82,7 +82,6 @@
               } else {
                 _this.changeView('like');
                 return FB.Event.subscribe('edge.create', function(href, widget) {
-                  debugger;
                   if (href.match(new RegExp(_this.settings.page, 'i'))) {
                     return _this.changeView('liked');
                   }
@@ -117,8 +116,7 @@
         var complete,
           _this = this;
         complete = function(err) {
-          this.changeView('done');
-          debugger;
+          return _this.changeView('done');
         };
         return FB.api('/me', function(userData) {
           var submitFn;
@@ -139,7 +137,7 @@
         userRecord = this.firebase.child("" + this.settings.firebaseNs + "/" + this.userId);
         return userRecord.on('value', function(snapshot) {
           userRecord.off('value');
-          if ((snapshot != null ? snapshot.val() : void 0) && firstReceipt) {
+          if ((snapshot != null ? snapshot.val() : void 0) != null) {
             return _this.changeView('dupe');
           } else {
             return userRecord.set(data, done);
