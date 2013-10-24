@@ -8,10 +8,10 @@ do ($ = jQuery, window, document) ->
 
 		width: null
 		height: null
-		
+
 		firebaseUrl: ''
 		firebaseNs: "plzlike-entrants"
-		
+
 		webhookUrl: ''
 		method: 'POST'
 
@@ -44,7 +44,7 @@ do ($ = jQuery, window, document) ->
 			if @settings.firebaseUrl
 				# Fire up a firebase if url provided
 				@firebase = new Firebase(@settings.firebaseUrl)
-			
+
 		# Loads Facebooks JS SDK (if not already present)
 		loadFB: (done) ->
 			if window.FB?
@@ -119,7 +119,7 @@ do ($ = jQuery, window, document) ->
 					throw new Error "No data store configured"
 				# DO IT
 				submitFn userData, complete
-			
+
 		# Submits data to Firebase.io cloud datastore
 		_submitFirebase: (data, done) =>
 			# Get user record firebase reference
@@ -169,7 +169,7 @@ do ($ = jQuery, window, document) ->
 
 			# Parse any Facebook widgets (like/send/etc)
 			FB?.XFBML.parse($incoming.get(0))
-			
+
 			# Ignition! (activate new view)
 			setTimeout (-> $incoming.addClass('plzlike-active')), 0
 
@@ -179,12 +179,12 @@ do ($ = jQuery, window, document) ->
 				LOADING
 			"""
 			# Begin - start button to bring up login/permissions
-			begin: -> 
+			begin: ->
 				return """
 					<button>Get started</button>
 				"""
 			# Like us! Show FB likebox
-			like: -> 
+			like: ->
 				return """
 					<div class="fb-like-box"
 						data-href="http://www.facebook.com/#{@settings.pageId}"
