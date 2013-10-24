@@ -194,7 +194,7 @@
         },
         like: function() {
           var _ref, _ref1;
-          return "<div class=\"fb-like-box\"\n	data-href=\"http://www.facebook.com/" + this.settings.pageId + "\"\n	data-width=\"" + ((_ref = this.settings.width) != null ? _ref : $(this.element).width()) + "\"\n	data-height=\"" + ((_ref1 = this.settings.height) != null ? _ref1 : $(this.element).height()) + "\"\n	data-colorscheme=\"light\"\n	data-show-faces=\"true\"\n	data-header=\"false\"\n	data-stream=\"false\"\n	data-show-border=\"false\">\n</div>";
+          return "<div class=\"fb-like-box\"\n	data-href=\"http://www.facebook.com/" + this.settings.pageId + "\"\n	data-width=\"" + ((_ref = this.settings.width) != null ? _ref : $(this.element).width()) + "\"\n	data-height=\"" + (((_ref1 = this.settings.height) != null ? _ref1 : $(this.element).height()) || '') + "\"\n	data-colorscheme=\"light\"\n	data-show-faces=\"true\"\n	data-header=\"false\"\n	data-stream=\"false\"\n	data-show-border=\"false\">\n</div>";
         },
         liked: function() {
           return "<button>Submit entry</button>\n<div class=\"disclaimer\">\n	<small>This promotion is in no way sponsored, endorsed, administered by, or associated with Facebook.</small>\n</div>";
