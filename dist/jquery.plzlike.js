@@ -134,17 +134,16 @@
       };
 
       PlzLike.prototype._submitFirebase = function(data, done) {
-        var firstReceipt, userRecord,
+        var userRecord,
           _this = this;
         userRecord = this.firebase.child("" + this.settings.firebaseNs + "/" + this.userId);
-        firstReceipt = true;
         return userRecord.on('value', function(snapshot) {
+          userRecord.off('value');
           if ((snapshot != null ? snapshot.val() : void 0) && firstReceipt) {
-            _this.changeView('dupe');
+            return _this.changeView('dupe');
           } else {
-            userRecord.set(data, done);
+            return userRecord.set(data, done);
           }
-          return firstReceipt = false;
         });
       };
 
