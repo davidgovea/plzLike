@@ -1,0 +1,3 @@
+.plzlike-container > div{position:absolute;width:100%;opacity:0;transition:opacity .5s}
+.plzlike-container .plzlike-active{transition-delay:.55s;opacity:1}
+.plzlike-container .disclaimer{font-size:.75em}
