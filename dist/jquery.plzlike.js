@@ -187,7 +187,7 @@
 
       PlzLike.prototype.templates = {
         loading: function() {
-          return "LOADING";
+          return "LOADING...";
         },
         begin: function() {
           return "<button>Get started</button>";
@@ -200,7 +200,7 @@
           return "<button>Submit entry</button>\n<div class=\"disclaimer\">\n	<small>This promotion is in no way sponsored, endorsed, administered by, or associated with Facebook.</small>\n</div>";
         },
         done: function() {
-          return "THANKS\n<div class=\"fb-send\"\n	data-href=\"" + window.location.href + "\"\n	data-colorscheme='light'>\n</div>";
+          return "Thanks for entering! Why not share?\n<div class=\"fb-send\"\n	data-href=\"" + window.location.href + "\"\n	data-colorscheme='light'>\n</div>";
         },
         dupe: function() {
           return "Already entered";
