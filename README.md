@@ -2,7 +2,7 @@
 
 ### A jQuery plugin for Facebook like-gates, backed by Firebase or custom endpoint.
 
-Blah
+See http://davidgovea.github.io/plzLike for more details docs/description
 
 ## Usage
 
