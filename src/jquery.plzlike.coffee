@@ -176,7 +176,7 @@ do ($ = jQuery, window, document) ->
 		templates:
 			# Loading - shown before FB SDK loaded
 			loading: -> """
-				LOADING
+				LOADING...
 			"""
 			# Begin - start button to bring up login/permissions
 			begin: ->
@@ -206,7 +206,7 @@ do ($ = jQuery, window, document) ->
 			"""
 			# All done! Thanks.
 			done: -> """
-				THANKS
+				Thanks for entering! Why not share?
 				<div class="fb-send"
 					data-href="#{window.location.href}"
 					data-colorscheme='light'>
