@@ -103,6 +103,28 @@ Sign up for <a href="http://firebase.com">Firebase</a> and include firebase scri
 </pre></div>
 </li>
 </ol>
+
+<h2>
+<a name="examples" class="anchor" href="#examples"><span class="octicon octicon-link"></span></a>Examples</h2>
+
+<p><strong>NOTE</strong>: By submitting these examples, you will be promted to accept the plzLike facebook app. I have <strong>disabled</strong> the (enabled by default) email permission, so you can be sure I won't spam 'ya. Feel free to remove it right after, or try multiple times!</p>
+
+<h3>
+<a name="simple-example" class="anchor" href="#simple-example"><span class="octicon octicon-link"></span></a>Simple example</h3>
+
+<div class="highlight highlight-html"><pre><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"ex1"</span><span class="nt">&gt;&lt;/div&gt;</span>
+</pre></div>
+
+<div class="highlight highlight-javascript"><pre><span class="nx">$</span><span class="p">(</span><span class="s1">'#ex1'</span><span class="p">).</span><span class="nx">plzLike</span><span class="p">({</span>
+    <span class="nx">appId</span><span class="o">:</span> <span class="s1">'500906316671503'</span><span class="p">,</span>
+    <span class="nx">page</span><span class="o">:</span> <span class="s1">'plzLikeJS'</span><span class="p">,</span>
+    <span class="nx">firebaseUrl</span><span class="o">:</span> <span class="s1">'https://plzlike.firebaseio.com/'</span>
+<span class="p">});</span>
+</pre></div>
+<h5>Result:</div>
+<div id="ex1"></div>
+
+
       </section>
       <footer>
         <p>Project maintained by <a href="https://github.com/davidgovea">davidgovea</a></p>
@@ -120,6 +142,15 @@ Sign up for <a href="http://firebase.com">Firebase</a> and include firebase scri
             pageTracker._trackPageview();
             } catch(err) {}
           </script>
-
+    <script src="https://raw.github.com/davidgovea/plzLike/master/dist/jquery.plzlike.js"></script>
+    <script type="text/javascript">
+      $(function(){
+        $('#ex1').plzLike({
+            appId: '500906316671503',
+            page: 'plzLikeJS',
+            firebaseUrl: 'https://plzlike.firebaseio.com/'
+        });
+      });
+    </script>
   </body>
 </html>
