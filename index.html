@@ -113,7 +113,7 @@ Sign up for <a href="http://firebase.com">Firebase</a> and include firebase scri
 <h3>
 <a name="simple-example" class="anchor" href="#simple-example"><span class="octicon octicon-link"></span></a>Simple example</h3>
 
-<div class="highlight highlight-html"><pre><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"ex1"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<div class="highlight highlight-html"><pre><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"ex1"</span> <span class="na">style=</span><span class="s">"height:200px;"</span><span class="nt">&gt;&lt;/div&gt;</span>
 </pre></div>
 
 <div class="highlight highlight-javascript"><pre><span class="nx">$</span><span class="p">(</span><span class="s1">'#ex1'</span><span class="p">).</span><span class="nx">plzLike</span><span class="p">({</span>
@@ -123,7 +123,7 @@ Sign up for <a href="http://firebase.com">Firebase</a> and include firebase scri
 <span class="p">});</span>
 </pre></div>
 <h5>Result:</h5>
-<div id="ex1"></div>
+<div id="ex1" style="height:200px;"></div>
 
 
       </section>
@@ -149,7 +149,8 @@ Sign up for <a href="http://firebase.com">Firebase</a> and include firebase scri
         $('#ex1').plzLike({
             appId: '500906316671503',
             page: 'plzLikeJS',
-            firebaseUrl: 'https://plzlike.firebaseio.com/'
+            firebaseUrl: 'https://plzlike.firebaseio.com/',
+            scope: 'user_likes'
         });
       });
     </script>
