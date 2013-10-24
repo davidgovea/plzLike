@@ -126,13 +126,16 @@ do ($ = jQuery, window, document) ->
 			userRecord = @firebase.child("#{@settings.firebaseNs}/#{@userId}")
 
 			# Check for existing
+			firstReceipt = true
 			userRecord.on 'value', (snapshot) =>
-				if snapshot?.val()?
+				if snapshot?.val() and firstReceipt
 					# They've already entered!
 					@changeView('dupe')
 				else
 					# First time. Set the data.
 					userRecord.set(data, done)
+
+				firstReceipt = false
 
 		# POSTs user data to URL
 		_submitPost: (data, done) =>
