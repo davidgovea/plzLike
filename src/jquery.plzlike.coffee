@@ -104,7 +104,7 @@ do ($ = jQuery, window, document) ->
 
 		# They liked you! Submit FB user data to Firebase or Webhook
 		submit: ->
-			complete = (err) ->
+			complete = (err) =>
 				@changeView('done')
 
 			# Get available data about this FB user
