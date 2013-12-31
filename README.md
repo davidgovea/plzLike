@@ -1,4 +1,6 @@
-# jQuery plzLike [![Build Status](https://secure.travis-ci.org/jquery-boilerplate/jquery-boilerplate.png?branch=master)](https://travis-ci.org/jquery-boilerplate/jquery-boilerplate)
+### **Note**: plzLike is unstable/not ready for production use. I will be adding tests and working on this soon.
+
+# jQuery plzLike
 
 ### A jQuery plugin for Facebook like-gates, backed by Firebase or custom endpoint.
 
